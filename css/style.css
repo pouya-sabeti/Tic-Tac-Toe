@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'KumbhSans';
+    src: url(../Font/KumbhSans-Medium.ttf);
+}
 * {
   margin: 0 auto;
   padding: 0;
@@ -10,7 +13,7 @@ html{
 }
 
 body {
-
+font-family: 'KumbhSans',sans-serif;
   color: #545454;
   background: linear-gradient(#14BDAC,#048679);
 
@@ -43,6 +46,7 @@ body {
     width: 90%;
     height: 90%;
     padding-top: 1rem;
+    cursor: pointer;
 }
 .coll i{
 font-size: 8rem;
@@ -80,38 +84,59 @@ background: #0DA192;
 opacity: 100%;
 transition: all .20s ease;
 }
-.tamam-times .dooz,.tamam-circle .dooz {
+.tamam-times .dooz,.tamam-circle .dooz ,.tamam-Intense-equals .dooz{
 visibility: hidden !important;
 opacity: 1% !important;
 }
-.circle-won,.times-won{
+.circle-won,.times-won,.Intense-equals{
     position: absolute;
     margin:  auto;
     left: 0;
     right: 0;
-    top: 10rem;
+    top: 20rem;
    
     visibility: hidden;
     opacity: 1%;
     transform: scale(.5);
 }
-.circle-won p,.times-won p{
-font-size: 3rem;
+.circle-won p,.times-won p,.Intense-equals p{
+    margin-bottom: 15px;
+font-size: 3.5rem;
 }
 .circle-won i ,.times-won i{
     font-size: 9rem;
     display: block;
+    margin-bottom: 15px;
+    }
+    .Intense-equals i{
+        font-size: 9rem;
+        margin-bottom: 15px;
     }
     .circle-won button ,.times-won button{
-        font-size: 3rem;
-        padding: .5rem;
+        font-size: 2rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 60%);
+        
+        border: 1px solid #545454;
+        border-radius: 10px;
         }
-        .tamam-circle .circle-won{
+        .Intense-equals button{
+            font-size: 2rem;
+            padding: .5rem;
+            display: block;
+            margin: 10px auto;
+            background: rgba(255, 255, 255, 60%);
+        cursor: pointer;
+            border: 1px solid #545454;
+            border-radius: 10px;
+        }
+        .tamam-circle .circle-won,.tamam-times .times-won,.tamam-Intense-equals .Intense-equals{
             animation: won .5s cubic-bezier(0.355, 0.885, 0.32, 1.275) forwards !important;
         }
         .tamam-times .times-won{
             animation: won .5s cubic-bezier(0.355, 0.885, 0.32, 1.275) forwards !important;
         }
+       
         @keyframes won {
             0%{
                 visibility: hidden;
@@ -121,6 +146,53 @@ font-size: 3rem;
             100%{
                 visibility: unset;
                 opacity: 100%;
-                transform: scale(1);
+                transform: scale(1.2);
             }
         }
+
+        .scores{
+            width: 90%;
+            height: 4rem;
+            border: .3rem solid #048679;
+            border-left: none;
+            border-right: none;
+            display: grid;
+            grid-template-columns: 50% 50%;
+margin: 2rem auto 10rem auto;
+        }
+        .scores div{
+            width: 100%;
+            text-align: left;
+            padding: .2rem;
+        }
+        .scores div:last-child{
+        
+            border-right: .3rem solid #048679;
+           
+        }
+        .scores div:first-child{
+        
+           
+            border-left: .3rem solid #048679;
+        }
+        .scores div i{
+        text-align: center;
+        width: 4rem;
+        height: 100%;
+        border-right: .3rem solid #048679;
+        border-left: .3rem solid #048679;
+            font-size: 2rem;
+            padding: .5rem 0;
+            display: inline-block;
+        }
+  .scores div p{
+      display: inline-block;
+      width: calc(100% - 4rem);
+      height: 100%;
+      text-align: center;
+      font-size: 2.4rem;
+  }
+  .circle,.times{
+      transition: all .3s ease;
+  
+  }

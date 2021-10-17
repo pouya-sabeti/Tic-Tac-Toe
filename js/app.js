@@ -1,6 +1,7 @@
 var coll = document.querySelectorAll(".coll");
 var nobat = 1;
-var coll_1,coll_2,coll_3,coll_4,coll_5,coll_6,coll_7,coll_8,coll_9;
+var coll_1,coll_2,coll_3,coll_4,coll_5,coll_6,coll_7,coll_8,coll_9,tamam = false;
+var score_circle = 0, score_times = 0;
 coll[0].addEventListener("click",()=>{
     if(coll[0].innerHTML != ""){
 
@@ -151,7 +152,10 @@ coll_1 == "circle" && coll_5 == "circle" && coll_9 == "circle" ||
 coll_3 == "circle" && coll_5 == "circle" && coll_7 == "circle"
 ){
    document.querySelector(".box").classList.add("tamam-circle");
+   score_circle += 1;
+   nobat = 0;
     clearInterval(Time);
+    tamam = true;
 }
 else if(coll_1 == "times" && coll_2 == "times" && coll_3 == "times" || 
 coll_4 == "times" && coll_5 == "times" && coll_6 == "times" ||
@@ -163,8 +167,41 @@ coll_1 == "times" && coll_5 == "times" && coll_9 == "times" ||
 coll_3 == "times" && coll_5 == "times" && coll_7 == "times"
 ){
     document.querySelector(".box").classList.add("tamam-times");
+    score_times += 1;
+     nobat = 1;
     clearInterval(Time);
+    tamam = true;
+}
+if(coll[0].innerHTML != "" && coll[1].innerHTML != "" && coll[2].innerHTML != "" && coll[3].innerHTML != "" && coll[4].innerHTML != "" && coll[5].innerHTML != "" && coll[6].innerHTML != "" && coll[7].innerHTML != "" && coll[8].innerHTML != "" && tamam == false){
+    document.querySelector(".box").classList.add("tamam-Intense-equals");
+    clearInterval(Time);
+}
+document.getElementById("score-circle").innerHTML = score_circle;
+document.getElementById("score-times").innerHTML = score_times;
+if(nobat == 0){
+    document.querySelector(".circle").style="background: rgba(255, 255, 255, 60%);";
+    document.querySelector(".times").style="";
+}
+else if(nobat == 1){
+    document.querySelector(".circle").style="";
+    document.querySelector(".times").style="background: rgba(255, 255, 255, 60%);";
 }
 }
 
 var Time =  setInterval(check,100);
+function agine(){
+coll[0].innerHTML = "";
+coll[1].innerHTML = "";
+coll[2].innerHTML = "";
+coll[3].innerHTML = "";
+coll[4].innerHTML = "";
+coll[5].innerHTML = "";
+coll[6].innerHTML = "";
+coll[7].innerHTML = "";
+coll[8].innerHTML = "";
+coll_1 = "",coll_2 = "",coll_3 = "",coll_4 = "",coll_5 = "",coll_6 = "",coll_7 = "",coll_8 = "",coll_9 = "",tamam = false;
+ Time =  setInterval(check,100);
+ document.querySelector(".box").classList.remove("tamam-circle");
+ document.querySelector(".box").classList.remove("tamam-times");
+ document.querySelector(".box").classList.remove("tamam-Intense-equals");
+}
