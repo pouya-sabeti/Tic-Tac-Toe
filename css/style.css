@@ -2,6 +2,10 @@
     font-family: 'KumbhSans';
     src: url(../Font/KumbhSans-Medium.ttf);
 }
+@font-face {
+    font-family: 'iransans';
+    src: url(../Font/IRANSansWeb.ttf);
+}
 * {
   margin: 0 auto;
   padding: 0;
@@ -13,7 +17,7 @@ html{
 }
 
 body {
-font-family: 'KumbhSans',sans-serif;
+font-family: 'KumbhSans','iransans',sans-serif;
   color: #545454;
   background: linear-gradient(#14BDAC,#048679);
 
@@ -40,7 +44,7 @@ font-family: 'KumbhSans',sans-serif;
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-rows: 33.3% 33.3% 33.3%;
- /* background: #545454; */
+    animation: won .3s cubic-bezier(0.355, 0.885, 0.32, 1.475) forwards !important;
 }
 .coll{
     width: 90%;
@@ -50,6 +54,7 @@ font-family: 'KumbhSans',sans-serif;
 }
 .coll i{
 font-size: 8rem;
+animation: won .3s cubic-bezier(0.355, 0.885, 0.32, 1.475) forwards !important;
 }
 .line-1{
     position: absolute;
@@ -107,6 +112,7 @@ font-size: 3.5rem;
     font-size: 9rem;
     display: block;
     margin-bottom: 15px;
+   
     }
     .Intense-equals i{
         font-size: 9rem;
@@ -146,7 +152,7 @@ font-size: 3.5rem;
             100%{
                 visibility: unset;
                 opacity: 100%;
-                transform: scale(1.2);
+                transform: scale(1);
             }
         }
 
@@ -191,8 +197,24 @@ margin: 2rem auto 10rem auto;
       height: 100%;
       text-align: center;
       font-size: 2.4rem;
+     
   }
   .circle,.times{
       transition: all .3s ease;
   
   }
+  .moiarefi{
+color: #fff !important;
+width: 100%;
+text-align: center;
+font-size: 1.5rem;
+margin-bottom: 2rem;
+  }
+  .moiarefi a{
+    color: #fff !important;
+    text-decoration: none;
+    padding: .3rem 0;
+    border-bottom: .1rem solid #fff;
+margin-right: .5rem;
+    
+      }

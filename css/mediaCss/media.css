@@ -17,7 +17,15 @@
   .app {
     width: 576px;
   }
-  
+  .coll{
+
+    cursor: default;
+}
+.Intense-equals button{
+
+cursor: default;
+
+}
 }
 @media (max-width: 575.98px) {
   .app {
@@ -25,4 +33,18 @@
     padding: 0 15px;
   }
   
+}
+@media (max-width: 400.98px) {
+  .app {
+    width: calc(100% - 30px);
+    padding: 0 15px;
+  }
+  .box{
+    /* width: 40rem;
+    height: 50rem;
+    background: rgba(255, 255, 255, 40%); */
+    backdrop-filter: none !important;
+    /* border-radius: 1rem;
+    box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 20%); */
+}
 }

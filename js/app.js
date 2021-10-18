@@ -1,5 +1,6 @@
 var coll = document.querySelectorAll(".coll");
-var nobat = 1;
+var nobat =Number(confirm("اول ضربدر شروع کند؟"));
+
 var coll_1,coll_2,coll_3,coll_4,coll_5,coll_6,coll_7,coll_8,coll_9,tamam = false;
 var score_circle = 0, score_times = 0;
 coll[0].addEventListener("click",()=>{
