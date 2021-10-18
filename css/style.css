@@ -218,3 +218,49 @@ margin-bottom: 2rem;
 margin-right: .5rem;
     
       }
+.dark-panel{
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          background: rgba(255, 255, 255, 50%);
+          z-index: 999;
+          backdrop-filter: blur(5px);
+      }
+      .nobat{
+          position: absolute;
+          margin: auto;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 30rem;
+          height: 12rem;
+          border-radius: 1rem;
+          background: rgba(255, 255, 255, 40%);
+          border: .1rem solid #048679;
+          backdrop-filter: blur(5px);
+          z-index: 1000;
+      }
+      .nobat p{
+          font-size: 2.5rem;
+          margin: 1.5rem 0;
+      }
+      .nobat div{
+          display: flex;
+          justify-self: inherit;
+      }
+      .nobat button{
+        font-size: 2rem;
+        padding: .5rem;
+        display: inline;
+        margin: 10px auto;
+        background: rgba(255, 255, 255, 60%);
+    cursor: pointer;
+        border: 1px solid #048679;
+        border-radius: 10px;
+        transform: scale(1);
+        transition: all .15s ease;
+    }
+    .nobat button:hover{
+        transform: scale(1.1);
+    }
